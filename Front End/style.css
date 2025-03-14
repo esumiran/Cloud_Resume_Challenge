@@ -1,0 +1,19 @@
+body{
+    background-color: whitesmoke;
+}
+
+.name{
+    color: black;
+    text-align: center;
+}
+.jobtitle{
+    color: black;
+    text-align: center;
+}
+.contact-info{
+    color: black;
+    text-align: center;
+}
+.Summary{
+    color: black;
+}
