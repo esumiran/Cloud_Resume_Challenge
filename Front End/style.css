@@ -14,3 +14,12 @@ body{
     color: black;
     text-align: center;
 }
+
+
+
+/*------- Images ---------*/
+
+.linkedin-icon {
+    width: 20px; /* Set the width to match icon size */
+    height: 18px; /* Set the height to match icon size */
+}
