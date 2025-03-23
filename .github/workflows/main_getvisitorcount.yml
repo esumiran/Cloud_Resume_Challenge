@@ -25,12 +25,22 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    # Step 2: Set up Python environment
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10' 
+    # # Step 2: Set up Python environment
+    # - name: Set up Python
+    #   uses: actions/setup-python@v2
+    #   with:
+    #     python-version: '3.10' 
+    #     run: 
 
+
+    - name: Install Python
+      run: |
+        sudo apt update
+        sudo apt install -y python3 python3-pip  # Install Python and pip
+        python3 --version  # Check Python version
+
+
+        
     - name: Install dependencies
       
       run: 
