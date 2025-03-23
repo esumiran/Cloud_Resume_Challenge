@@ -40,13 +40,13 @@ jobs:
         python3 --version  # Check Python version
 
 
-        
+
     - name: Install dependencies
       
       run: 
                cd backend/api && \
                python3 -m pip install --upgrade pip && \
-               pythom3 -m pip install -r requirements.txt
+               python3 -m pip install -r requirements.txt
 
       # Optional: Add step to run tests here
 
