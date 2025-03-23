@@ -21,34 +21,31 @@ jobs:
       contents: read #This is required for actions/checkout
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    # Step 1: Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Setup Python version
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
+    # Step 2: Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10' 
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-
-      - name: Install dependencies
+    - name: Install dependencies
       
-        run: 
+      run: 
                cd backend/api && \
                python -m pip install --upgrade pip && \
                pip install -r requirements.txt
 
       # Optional: Add step to run tests here
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+    - name: Zip artifact for deployment
+      run: zip release.zip ./* -r
 
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
-        with:
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v4
+      with:
           name: python-app
           path: |
             release.zip
