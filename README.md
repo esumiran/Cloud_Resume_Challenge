@@ -1,2 +1,3 @@
 # Cloud Resume Challenge
-This Repository contains the Code for my Resume hosted in Microsoft Azure 
+This is the Cloud Resume Challeneg hosted in AWS
+
